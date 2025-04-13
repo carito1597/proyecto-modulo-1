@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Crear una instancia de axios con la configuración base
 const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL || 'http://localhost:3000',
+    baseURL: process.env.REACT_APP_API_URL || 'https://proyecto-modulo-1-back.onrender.com',
     headers: {
         'Content-Type': 'application/json',
     },

@@ -2,10 +2,12 @@ import axios from 'axios';
 
 // Crear una instancia de axios con la configuración base
 const axiosInstance = axios.create({
-    baseURL: ('https://proyecto-modulo-1-back.onrender.com'),
+    baseURL: (process.env.REACT_APP_API_URL || 'https://proyecto-modulo-1-back.onrender.com') + '/api',
     headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
     },
+    withCredentials: false
 });
 
 // Interceptor para manejar errores globalmente

@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Aplicación de Gestión de Tareas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Enlaces de la Aplicación
+- Aplicación Web: [https://proyecto-modulo-1-pi.vercel.app/](https://proyecto-modulo-1-pi.vercel.app/)
+- API Backend: [https://proyecto-modulo-1-back.onrender.com](https://proyecto-modulo-1-back.onrender.com)
 
-## Available Scripts
+## Descripción
+Aplicación web para gestionar tareas personales. Permite crear una cuenta, iniciar sesión y administrar tus tareas diarias de forma sencilla.
 
-In the project directory, you can run:
+## Pantallas de la Aplicación
 
-### `npm start`
+### 1. Registro
+En esta pantalla puedes crear tu cuenta con:
+- Nombre
+- Correo electrónico
+- Contraseña
+- Confirmación de contraseña
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Inicio de Sesión
+Aquí puedes acceder a tu cuenta usando:
+- Correo electrónico
+- Contraseña
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. Página Principal
+En esta pantalla puedes:
+- Ver todas tus tareas
+- Crear nuevas tareas
+- Editar tareas existentes
+- Eliminar tareas
+- Marcar tareas como completadas
+- Filtrar tareas por estado
+- Buscar tareas por título
 
-### `npm test`
+## Tecnologías Utilizadas
+- React
+- React Router
+- Axios
+- JWT para autenticación
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Desarrollo Local
 
-### `npm run build`
+1. Instalar dependencias:
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Iniciar la aplicación:
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La aplicación se abrirá en [http://localhost:3000](http://localhost:3000)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Build
+To create a production build:
+```bash
+npm run build
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Environment Variables
+The application uses the following environment variable:
+- `REACT_APP_API_URL`: Backend API URL (optional, defaults to the deployed backend URL)

@@ -13,20 +13,19 @@ const Login = () => {
         setError('');
         
         try {
-            const response = await axiosInstance.post('/auth/login', {
+            const response = await axiosInstance.post('/api/auth/login', {
                 email,
                 password
             });
             
-            // Guardar el token en localStorage
-            if (response.data.token) {
+            if (response.data) {
                 localStorage.setItem('token', response.data.token);
-                // Configurar el token para futuras peticiones
                 axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
                 navigate('/home');
             }
         } catch (err) {
-            setError(err.response?.data?.message || 'Error al iniciar sesión');
+            const errorMessage = err.response?.data?.error || 'Error al iniciar sesión';
+            setError(errorMessage);
         }
     };
 

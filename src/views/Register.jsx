@@ -30,18 +30,18 @@ const Register = () => {
         }
 
         try {
-            const response = await axiosInstance.post('/auth/register', {
+            const response = await axiosInstance.post('/api/auth/register', {
                 name: formData.name,
                 email: formData.email,
                 password: formData.password
             });
 
             if (response.data) {
-                // Registro exitoso, redirigir a login
                 navigate('/login');
             }
         } catch (err) {
-            setError(err.response?.data?.message || 'Error al registrar usuario');
+            const errorMessage = err.response?.data?.error || 'Error al registrar usuario';
+            setError(errorMessage);
         }
     };
 
